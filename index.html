@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Math Helper</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+      background-color: rgb(31, 31, 31);
+    }
+
+    h1 {
+      color: aqua;
+       text-shadow:
+    -2px -2px 0 black,
+     2px -2px 0 black,
+    -2px  2px 0 black,
+     2px  2px 0 black;
+    }
+
+/* CSS */
+.button-62 {
+  background: linear-gradient(to bottom right, #EF4765, #FF9A5A);
+  border: 0;
+  border-radius: 12px;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system,system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 2.5;
+  outline: transparent;
+  padding: 0 1rem;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow .2s ease-in-out;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+}
+
+.button-62:not([disabled]):focus {
+  box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+}
+
+.button-62:not([disabled]):hover {
+  box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+}
+    #question {
+      font-size: 48px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    input {
+      padding: 10px;
+      font-size: 20px;
+      width: 120px;
+      text-align: center;
+    }
+
+    button {
+      padding: 10px 16px;
+      font-size: 18px;
+      margin: 10px 5px;
+      cursor: pointer;
+    }
+
+    #result {
+      margin-top: 20px;
+      font-size: 22px;
+      font-weight: bold;
+    }
+    #question {
+      color: #FFFFFF;
+    }
+    #answer {
+  border: none;
+  outline: none;
+  border-radius: 15px;
+  padding: 1em;
+  background-color: #ccc;
+  box-shadow: inset 2px 5px 10px rgba(0,0,0,0.3);
+  transition: 300ms ease-in-out;
+}
+
+#answer:focus {
+  background-color: white;
+  transform: scale(1.05);
+  box-shadow: 13px 13px 50px #969696,
+             -13px -13px 50px #ffffff;
+}
+  </style>
+</head>
+<body>
+
+  <h1>Math Helper</h1>
+
+  <div>
+    <button class="button-62" role="button" onclick="setOperation('+')">Addition</button>
+    <button class="button-62" role="button" onclick="setOperation('-')">Subtraction</button>
+    <button class="button-62" role="button" onclick="setOperation('*')">Multiplication</button>
+    <button class="button-62" role="button" onclick="setOperation('/')">Division</button>
+  </div>
+
+  <div  id="question"></div>
+
+  <input type="number" id="answer" placeholder="Answer">
+  <br>
+  <button onclick="checkAnswer()"class="button-62" role="button">Check Answer</button>
+
+
+  <div id="result"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
