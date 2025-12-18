@@ -55,16 +55,16 @@ function checkAnswer() {
   let correctAnswer;
 
   switch (operator) {
-    case "+":
+    case "plus":
       correctAnswer = num1 + num2;
       break;
-    case "-":
+    case "minus":
       correctAnswer = num1 - num2;
       break;
-    case "*":
+    case "times":
       correctAnswer = num1 * num2;
       break;
-    case "/":
+    case "divided by":
       correctAnswer = num1 / num2;
       break;
   }
@@ -98,3 +98,4 @@ document.addEventListener("keydown", function(event) {
 
 // Start first question
 newQuestion();
+
